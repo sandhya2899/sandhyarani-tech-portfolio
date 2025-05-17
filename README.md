@@ -1,4 +1,4 @@
-# sandhyarani-tech-portfolio
+
 # Sandhya Rani | Technical Writing Portfolio 
 
 

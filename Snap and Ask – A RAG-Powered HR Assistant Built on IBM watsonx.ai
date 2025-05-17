@@ -13,3 +13,44 @@ While this is a simulated implementation, it is conceptually designed to align w
 > ✳️ Note: This is a simulated project created as part of a technical writing portfolio to demonstrate conceptual understanding, product alignment, and technical documentation skills using IBM watsonx.ai capabilities.
 
 The sections that follow detail the architecture, sample data flow, prompt construction, simulated outputs, and how this assistant aligns with IBM’s mission to scale trustworthy AI in the workplace.
+
+## 2. Use Case Context
+
+In large organizations, employees frequently encounter HR-related documents that are dense, complex, and difficult to interpret. These include:
+
+- Digital or scanned payslips  
+- Offer letters with tax-related clauses  
+- Internal portal screenshots (e.g., dashboards showing deduction codes, bonus breakdowns, leave status)  
+- Policy notices or announcements shared as images via email, Slack, or WhatsApp  
+
+Despite increased digitization of HR operations, many employees still rely on human HR support to understand basic document content and decode ambiguous terms — often leading to high support loads and poor employee experience. Common questions include:
+
+- “What does this TDS Code mean on my payslip?”  
+- “Why is my take-home salary lower this month?”  
+- “Which clause applies to this deduction?”  
+
+Snap and Ask addresses these issues by offering a retrieval-augmented, AI-powered interface where employees can upload images of documents, ask free-form questions, and receive grounded, policy-aware explanations.  
+
+It uses Optical Character Recognition (OCR) to extract key terms from images, retrieves relevant information from internal HR policy repositories or portals, and generates a clear, personalized answer using a foundation model like Granite on watsonx.ai.
+
+---
+
+### 📌 Example Scenario: “Why Is ₹2,000 Deducted from My Salary?”
+
+Let’s say an employee uploads a screenshot of their payslip and asks:  
+> “Why is ₹2,000 less credited to my account this month?”
+
+Snap and Ask processes the image and query by:
+
+1. Extracting key text from the image — including deduction codes, amounts, and dates  
+2. Searching for matching HR policies (e.g., “Clause 4.1 – Half-day salary deduction for unapproved leave”)  
+3. Pulling relevant data from the company’s HR portal such as:
+   - Leave balance and attendance logs  
+   - Pending or rejected approvals  
+   - Email/chat context with HR (if integrated and allowed)  
+
+4. Constructing a watsonx.ai-style prompt to contextualize all this data and respond with:
+
+> “Your salary was reduced by ₹2,000 due to a half-day leave taken on April 15, which exceeded your leave balance. Your manager’s approval was recorded on April 17, past the monthly cutoff. This aligns with the Leave and Attendance Policy, Section 4.1.”
+
+This scenario showcases the assistant’s ability to combine image understanding, document retrieval, and real-time system data into a single, explainable output. It transforms what would be a tedious back-and-forth with HR into a seamless, AI-powered experience — grounded in IBM’s mission to build trustworthy and intelligent enterprise systems using watsonx.ai.

@@ -71,3 +71,59 @@ Used to demonstrate the end-to-end workflow — from OCR to document retrieval t
 
 ### 🔹 Tesseract OCR  
 Open-source Optical Character Recognition tool used to extract structured text from images like payslips and offer letters, enabling multimodal input processing.
+
+## 🎯 Prompt Design Strategy
+
+In a Retrieval-Augmented Generation (RAG) pipeline like *Snap and Ask*, the success of natural language responses depends on how effectively user queries and contextual data are framed into prompts for the foundation model.
+
+This section outlines the strategy behind crafting prompts that are relevant, structured, and aligned with enterprise HR use cases.
+
+---
+
+### 🛠️ Design Framework
+
+Prompts in *Snap and Ask* are constructed using a three-part approach:
+
+1. **System Role Definition**  
+   Describes the assistant's function and tone (e.g., a virtual HR support agent trained on internal policies).
+
+2. **Contextual Inputs**  
+   Sourced from OCR output (from the uploaded image), related HR document content, and structured metadata (e.g., dates, codes).
+
+3. **User Intent**  
+   Captures the employee’s free-form query or doubt.
+
+This structured prompting ensures coherence, precision, and policy relevance in the generated responses.
+
+---
+
+### 📄 Prompt Template
+
+```text
+You are an AI assistant trained on a company’s HR policies and internal communication protocols.  
+Use the provided context to answer the user’s question as clearly and accurately as possible.
+
+Context:
+- Document type: <e.g., payslip, offer letter, portal screenshot>
+- Extracted text: <Key content from OCR>
+- Retrieved policy content: <Relevant document excerpts>
+- Metadata: <e.g., dates, deduction codes, balances>
+
+User Query: <User’s original question>
+
+Answer:
+
+This flexible structure allows the assistant to adapt to various document types and employee concerns.
+
+---
+
+### 🔁 Prompt Variation by Use Case
+
+| **Document Type**            | **Contextual Focus**               | **Prompt Strategy**                          |
+|-----------------------------|------------------------------------|----------------------------------------------|
+| Payslip (image)             | Deduction codes, salary details    | Highlight amounts and explain discrepancies  |
+| Offer Letter (PDF)          | Clauses, compensation, benefits    | Summarize terms and clarify policies         |
+| Internal Portal Screenshot  | Leave status, balances, approvals  | Interpret codes and map to HR explanations   |
+
+Prompt templates are dynamically adjusted based on input type, enabling consistent performance across a wide range of HR document scenarios.
+

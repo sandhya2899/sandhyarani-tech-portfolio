@@ -71,3 +71,5 @@ Used to demonstrate the end-to-end workflow — from OCR to document retrieval t
 
 ### 🔹 Tesseract OCR  
 Open-source Optical Character Recognition tool used to extract structured text from images like payslips and offer letters, enabling multimodal input processing.
+
+Update content in Snap and Ask – A RAG-Powered HR Assistant Built on IBM watsonx.ai.md after rename

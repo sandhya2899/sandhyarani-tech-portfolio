@@ -4,7 +4,7 @@
 
 Snap and Ask is a simulated Retrieval-Augmented Generation (RAG) assistant built around the capabilities of IBM watsonx.ai — IBM’s enterprise-grade platform offering AI solutions, foundation models, generative AI, and tools for enterprise innovation and business needs.
 
-This use case demonstrates how watsonx.ai can power a multimodal assistant for HR teams and employees by enabling intelligent question answering based on visual inputs like payslips, offer letters, or internal HR portal screenshots. The assistant uses Optical Character Recognition (OCR) to extract text from the image, retrieves relevant information from a curated HR document base using similarity search, and generates grounded, natural-language responses using IBM’s foundation models (e.g., Granite family models).
+This use case demonstrates how watsonx.ai can power a multimodal assistant for HR teams and employees by enabling intelligent question-answering based on visual inputs like payslips, offer letters, or internal HR portal screenshots. The assistant uses Optical Character Recognition (OCR) to extract text from the image, retrieves relevant information from a curated HR document base using similarity search, and generates grounded, natural-language responses using IBM’s foundation models (e.g., Granite family models).
 
 This project reflects IBM's broader vision for trustworthy, explainable AI in enterprise workflows. It draws from IBM's documented emphasis on retrieval-augmented generation, document understanding, and responsible AI integration — repurposed here to solve a real-world challenge faced by HR teams: helping employees interpret policy-heavy documents with minimal manual intervention.
 
@@ -54,3 +54,20 @@ Snap and Ask processes the image and query by:
 > “Your salary was reduced by ₹2,000 due to a half-day leave taken on April 15, which exceeded your leave balance. Your manager’s approval was recorded on April 17, past the monthly cutoff. This aligns with the Leave and Attendance Policy, Section 4.1.”
 
 This scenario showcases the assistant’s ability to combine image understanding, document retrieval, and real-time system data into a single, explainable output. It transforms what would be a tedious back-and-forth with HR into a seamless, AI-powered experience — grounded in IBM’s mission to build trustworthy and intelligent enterprise systems using watsonx.ai.
+
+## ✅ Included Components
+
+### 🔹 IBM watsonx.ai  
+Enterprise-grade AI platform used to simulate Retrieval-Augmented Generation (RAG) for grounded, natural language responses using IBM’s foundation models like Granite.
+
+### 🔹 IBM Watson Studio  
+A collaborative development environment leveraged for designing prompts, simulating model outputs, and showcasing integration workflows for enterprise AI applications.
+
+### 🔹 IBM Cloud Object Storage  
+Simulated as the secure storage layer for HR policy documents and image data, forming the retrievable knowledge base for semantic search.
+
+### 🔹 Jupyter Notebooks  
+Used to demonstrate the end-to-end workflow — from OCR to document retrieval to answer generation — through live code, sample inputs, and annotated explanations.
+
+### 🔹 Tesseract OCR  
+Open-source Optical Character Recognition tool used to extract structured text from images like payslips and offer letters, enabling multimodal input processing.

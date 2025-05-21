@@ -76,8 +76,6 @@ Open-source Optical Character Recognition tool used to extract structured text f
 
 In a Retrieval-Augmented Generation (RAG) pipeline like *Snap and Ask*, the success of natural language responses depends on how effectively user queries and contextual data are framed into prompts for the foundation model.
 
-This section outlines the strategy behind crafting prompts that are relevant, structured, and aligned with enterprise HR use cases.
-
 ---
 
 ### 🛠️ Design Framework
@@ -99,7 +97,6 @@ This structured prompting ensures coherence, precision, and policy relevance in 
 
 ### 📄 Prompt Template
 
-```text
 You are an AI assistant trained on a company’s HR policies and internal communication protocols.  
 Use the provided context to answer the user’s question as clearly and accurately as possible.
 
@@ -119,11 +116,118 @@ This flexible structure allows the assistant to adapt to various document types 
 
 ### 🔁 Prompt Variation by Use Case
 
-| **Document Type**            | **Contextual Focus**               | **Prompt Strategy**                          |
-|-----------------------------|------------------------------------|----------------------------------------------|
-| Payslip (image)             | Deduction codes, salary details    | Highlight amounts and explain discrepancies  |
-| Offer Letter (PDF)          | Clauses, compensation, benefits    | Summarize terms and clarify policies         |
-| Internal Portal Screenshot  | Leave status, balances, approvals  | Interpret codes and map to HR explanations   |
+| **Document Type**           | **Contextual Focus**              | **Prompt Strategy**                         |
+|----------------------------|----------------------------------|---------------------------------------------|
+| Payslip (image)            | Deduction codes, salary details  | Highlight amounts and explain discrepancies |
+| Offer Letter (PDF)         | Clauses, compensation, benefits  | Summarize terms and clarify policies        |
+| Internal Portal Screenshot | Leave status, balances, approvals| Interpret codes and map to HR explanations  |
 
 Prompt templates are dynamically adjusted based on input type, enabling consistent performance across a wide range of HR document scenarios.
 
+## 🧪 Simulated Scenarios: How Snap and Ask Responds
+
+The following scenarios illustrate how Snap and Ask simulates HR query resolution using a combination of OCR, similarity-based retrieval, and foundation model generation via IBM watsonx.ai.
+
+Each example shows how the assistant interprets a user question, extracts visual text data, searches the HR policy base, and composes a grounded response.
+
+---
+
+### 📄 Scenario 1: Payslip Deduction Clarification
+
+**Uploaded Image:** A screenshot of a payslip  
+**User Question:** “Why is ₹2,000 deducted this month?”
+
+**Extracted Text via OCR:**
+-Deduction Code: LOP-APRIL
+
+-Amount: ₹2,000
+
+
+**Retrieved Data from HR Systems:**
+- One unapproved leave recorded on April 15th  
+- No managerial approval before payroll processing date
+
+**Retrieved Policy:**
+> *Clause 4.1: One day’s salary will be deducted for each unapproved leave exceeding the balance quota.*
+
+**Generated Response:**
+> ₹2,000 was deducted due to one unapproved leave on April 15th. As per Section 4.1 of the Leave Policy, a full day’s salary is deducted for each such instance. Approval was not granted before the payroll processing date.
+
+---
+
+### 📄 Scenario 2: Offer Letter Clause Confusion
+
+**Uploaded Document:** Offer letter PDF  
+**User Question:** “What does Clause 6.2 mean?”
+
+**Extracted Text:**
+6.2: Variable compensation shall be subject to business performance and individual ratings. No minimum payout is guaranteed.
+
+
+**Retrieved Policy Summary:**
+> *Variable components are performance-linked and discretionary in nature.*
+
+**Generated Response:**
+> Clause 6.2 indicates that your variable pay is not fixed and will depend on company results and your performance rating. It’s not guaranteed, and the payout amount can vary.
+
+---
+
+### 📄 Scenario 3: Leave Status from Portal Screenshot
+
+**Uploaded Image:** Screenshot from internal HR portal  
+**User Question:** “Why is my casual leave rejected?”
+
+**Extracted Text:**
+Leave ID: CL-9023
+
+Status: Rejected
+
+
+**Retrieved Data from HR Systems:**
+- Casual leave count exceeded monthly quota (3 applied, limit is 2)
+
+**Retrieved Rule:**
+> *Employees can apply for a maximum of 2 casual leaves per month.*
+
+**Generated Response:**
+> Your casual leave request (ID CL-9023) was rejected because it exceeded the monthly limit of two casual leaves, as outlined in the Leave and Attendance Policy.
+
+---
+
+### 📄 Scenario 4: Bonus Calculation Clarification
+
+**Uploaded Document:** Year-end bonus breakdown  
+**User Question:** “Why is my bonus lower than last year?”
+
+**Extracted Text:**
+Bonus FY 2023–24: ₹50,000
+
+**Retrieved Data from HR Systems:**
+- Bonus FY 2022–23: ₹65,000  
+- Performance Rating FY 2023–24: 3
+
+**Retrieved Benchmark Policy:**
+> *Employees with a performance rating of 3 or below are eligible for reduced bonus payouts.*
+
+**Generated Response:**
+> Your bonus this year was ₹50,000 compared to ₹65,000 last year, primarily due to a performance rating of 3. According to the bonus policy, lower ratings correspond to reduced payout brackets.
+
+---
+
+These scenarios showcase the assistant’s ability to simulate intelligent, grounded interactions — leveraging OCR, HR knowledge bases, and prompt-based generation in watsonx.ai to create clear and contextual responses. While the implementation is conceptual, the examples mirror realistic enterprise HR queries and demonstrate IBM watsonx.ai’s potential in solving them.
+
+## 🧾 License & Acknowledgement
+
+**License**  
+This repository and its contents are provided **“as-is”** for demonstration and educational purposes only. No production deployment is intended or supported.  
+
+**Acknowledgement**  
+This project was inspired by and conceptually aligned with IBM’s enterprise AI offerings. Special thanks to:  
+- [IBM watsonx.ai Documentation](https://www.ibm.com/docs/en/watsonx)  
+- IBM’s best practices for Retrieval-Augmented Generation and Responsible AI  
+- Open-source tools and communities that enable rapid prototyping of AI-driven applications  
+  
+---
+
+**Author**  
+Sandhya Rani — Technical Content Specialist & Researcher

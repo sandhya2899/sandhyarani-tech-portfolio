@@ -216,18 +216,22 @@ Bonus FY 2023–24: ₹50,000
 
 These scenarios showcase the assistant’s ability to simulate intelligent, grounded interactions — leveraging OCR, HR knowledge bases, and prompt-based generation in watsonx.ai to create clear and contextual responses. While the implementation is conceptual, the examples mirror realistic enterprise HR queries and demonstrate IBM watsonx.ai’s potential in solving them.
 
-## 🧾 License & Acknowledgement
-
-**License**  
-This repository and its contents are provided **“as-is”** for demonstration and educational purposes only. No production deployment is intended or supported.  
-
-**Acknowledgement**  
-This project was inspired by and conceptually aligned with IBM’s enterprise AI offerings. Special thanks to:  
-- [IBM watsonx.ai Documentation](https://www.ibm.com/docs/en/watsonx)  
-- IBM’s best practices for Retrieval-Augmented Generation and Responsible AI  
-- Open-source tools and communities that enable rapid prototyping of AI-driven applications  
-  
 ---
 
-**Author**  
-Sandhya Rani — Technical Content Specialist & Researcher
+---
+
+## 📘 About This Project
+
+**Snap and Ask** is a simulated concept created as part of a technical portfolio to showcase strategic thinking, documentation ability, and an understanding of how modern AI workflows — like retrieval-augmented generation (RAG), document intelligence, and multimodal interaction — can be applied in real-world enterprise scenarios.
+
+While not a working prototype, this documentation demonstrates how a virtual assistant could help employees interpret complex internal documents like payslips or policy screenshots using a combination of OCR, intelligent retrieval, and language generation models. The approach is broadly adaptable to industries where policy-heavy communication and document overload lead to inefficiencies.
+
+---
+
+## 👩‍💻 Author
+
+**Sandhya Rani**  
+*Technical Writer | Researcher | Product & Marketing Content Enthusiast*  
+Driven by a passion for simplifying complex tech concepts and crafting user-focused content.
+
+

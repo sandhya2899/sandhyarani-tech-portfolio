@@ -6,7 +6,7 @@ Snap and Ask is a simulated Retrieval-Augmented Generation (RAG) assistant built
 
 This use case demonstrates how watsonx.ai can power a multimodal assistant for HR teams and employees by enabling intelligent question-answering based on visual inputs like payslips, offer letters, or internal HR portal screenshots. The assistant uses Optical Character Recognition (OCR) to extract text from the image, retrieves relevant information from a curated HR document base using similarity search, and generates grounded, natural-language responses using IBM’s foundation models (e.g., Granite family models).
 
-This project reflects IBM's broader vision for trustworthy, explainable AI in enterprise workflows. It draws from IBM's documented emphasis on retrieval-augmented generation, document understanding, and responsible AI integration — repurposed here to solve a real-world challenge faced by HR teams: helping employees interpret policy-heavy documents with minimal manual intervention.
+This project reflects IBM's broader vision for trustworthy, explainable AI in enterprise workflows. It draws from IBM's documented emphasis on retrieval-augmented generation, document understanding, and responsible AI integration — repurposed here to solve a real-world challenge    faced by HR teams: helping employees interpret policy-heavy documents with minimal manual intervention.
 
 While this is a simulated implementation, it is conceptually designed to align with IBM’s product architecture and strategy, showcasing watsonx.ai’s potential in multimodal enterprise applications beyond text-only interactions.
 

@@ -33,7 +33,6 @@ Snap and Ask addresses these issues by offering a retrieval-augmented, AI-powere
 
 It uses Optical Character Recognition (OCR) to extract key terms from images, retrieves relevant information from internal HR policy repositories or portals, and generates a clear, personalized answer using a foundation model like Granite on watsonx.ai.
 
----
 
 ### 📌 Example Scenario: “Why Is ₹2,000 Deducted from My Salary?”
 
@@ -76,7 +75,6 @@ Open-source Optical Character Recognition tool used to extract structured text f
 
 In a Retrieval-Augmented Generation (RAG) pipeline like *Snap and Ask*, the success of natural language responses depends on how effectively user queries and contextual data are framed into prompts for the foundation model.
 
----
 
 ### 🛠️ Design Framework
 
@@ -93,7 +91,6 @@ Prompts in *Snap and Ask* are constructed using a three-part approach:
 
 This structured prompting ensures coherence, precision, and policy relevance in the generated responses.
 
----
 
 ### 📄 Prompt Template
 
@@ -112,7 +109,6 @@ Answer:
 
 This flexible structure allows the assistant to adapt to various document types and employee concerns.
 
----
 
 ### 🔁 Prompt Variation by Use Case
 

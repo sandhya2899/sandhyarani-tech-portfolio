@@ -218,8 +218,6 @@ These scenarios showcase the assistant’s ability to simulate intelligent, grou
 
 ---
 
----
-
 ## 📘 About This Project
 
 **Snap and Ask** is a simulated concept created as part of a technical portfolio to showcase strategic thinking, documentation ability, and an understanding of how modern AI workflows — like retrieval-augmented generation (RAG), document intelligence, and multimodal interaction — can be applied in real-world enterprise scenarios.

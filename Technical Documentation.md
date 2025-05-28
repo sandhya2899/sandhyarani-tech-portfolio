@@ -14,6 +14,8 @@ While this is a simulated implementation, it is conceptually designed to align w
 
 The sections that follow detail the architecture, sample data flow, prompt construction, simulated outputs, and how this assistant aligns with IBM’s mission to scale trustworthy AI in the workplace.
 
+---
+
 ## 2. Use Case Context
 
 In large organizations, employees frequently encounter HR-related documents that are dense, complex, and difficult to interpret. These include:
@@ -54,6 +56,8 @@ Snap and Ask processes the image and query by:
 
 This scenario showcases the assistant’s ability to combine image understanding, document retrieval, and real-time system data into a single, explainable output. It transforms what would be a tedious back-and-forth with HR into a seamless, AI-powered experience — grounded in IBM’s mission to build trustworthy and intelligent enterprise systems using watsonx.ai.
 
+---
+
 ## ✅ Included Components
 
 ### 🔹 IBM watsonx.ai  
@@ -70,6 +74,8 @@ Used to demonstrate the end-to-end workflow — from OCR to document retrieval t
 
 ### 🔹 Tesseract OCR  
 Open-source Optical Character Recognition tool used to extract structured text from images like payslips and offer letters, enabling multimodal input processing.
+
+---
 
 ## 🎯 Prompt Design Strategy
 
@@ -208,7 +214,6 @@ Bonus FY 2023–24: ₹50,000
 **Generated Response:**
 > Your bonus this year was ₹50,000 compared to ₹65,000 last year, primarily due to a performance rating of 3. According to the bonus policy, lower ratings correspond to reduced payout brackets.
 
----
 
 These scenarios showcase the assistant’s ability to simulate intelligent, grounded interactions — leveraging OCR, HR knowledge bases, and prompt-based generation in watsonx.ai to create clear and contextual responses. While the implementation is conceptual, the examples mirror realistic enterprise HR queries and demonstrate IBM watsonx.ai’s potential in solving them.
 

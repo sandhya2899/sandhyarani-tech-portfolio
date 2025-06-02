@@ -155,4 +155,8 @@ If Flipkart changes the color of the “Buy Now” button and sees a 10% increas
 
 ---
 
-✍️ *Authored by [Sandhya](#)*  
+## 👩‍💻 Author
+
+**Sandhya Rani**  
+*Technical Writer | Researcher | Product & Marketing Content Enthusiast*  
+Driven by a passion for simplifying complex tech concepts and crafting user-focused content.
